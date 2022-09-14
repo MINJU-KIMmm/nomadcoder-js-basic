@@ -1,19 +1,32 @@
-//Objects
+//Functions
 
-
-//list
-const player = ["nico", 1212, false, "little bit"];
-
-//Object
-const obPlayer = {
-    name : "nico",
-    points : 10,
-    fat : true,
+function sayHello(nameOfPerson, age) {
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
 }
 
-obPlayer.fat = false; // object 안의 값을 수정하는 것은 가능. object 전체를 수정하는 것은 불가능(obPlayer = ~~)
+sayHello("asd", 123);
+sayHello("werg", 435);
+sayHello("cxb", 12);
+sayHello("ntrr",324);
 
-obPlayer.lastName = "potato";// object에 값 추가
 
-console.log(obPlayer);
-console.log(obPlayer.name);
+
+function plus(a, b) {
+    console.log(a + b)
+}
+
+plus(8, 40);
+
+//NaN : 숫자 아님 이라는 뜻
+
+
+
+
+const player = {
+    name : "nico",
+    sayHello : function(otherPerson) {
+        console.log("hello" + otherPerson + "nice to meet you");
+    }
+}
+
+player.sayHello("wef");
