@@ -1,32 +1,27 @@
-//Functions
+//2.11 Returns
 
-function sayHello(nameOfPerson, age) {
-    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
-}
+const calculator = {
+    plus: function(a,b) {
+        return a+b;
+    },
+    minus: function(a,b) {
+        return a-b;
+    },
+    times: function(a,b) {
+        return a*b;
+    },
+    divide: function(a,b) {
+        return a/b;
+    },
+    power: function(a,b) {
+        return a**b;
+    },
+};
 
-sayHello("asd", 123);
-sayHello("werg", 435);
-sayHello("cxb", 12);
-sayHello("ntrr",324);
+const plusResult = calculator.plus(2,3);
+const minusResult = calculator.minus(plusResult,10);
+const timesResult = calculator.times(10,minusResult);
+const divideResult = calculator.divide(timesResult, plusResult);
+const powerResult = calculator.power(divideResult, minusResult);
 
-
-
-function plus(a, b) {
-    console.log(a + b)
-}
-
-plus(8, 40);
-
-//NaN : 숫자 아님 이라는 뜻
-
-
-
-
-const player = {
-    name : "nico",
-    sayHello : function(otherPerson) {
-        console.log("hello" + otherPerson + "nice to meet you");
-    }
-}
-
-player.sayHello("wef");
+//-> 콘솔창에 변수명 치면 값 리턴되어 나옴
