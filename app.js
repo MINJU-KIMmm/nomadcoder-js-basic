@@ -1,7 +1,11 @@
-//3.0 The Document Object
+//3.1 HTML in JS
 
-// js : html의 element들을 js로 변경, 읽음
+const title = document.getElementById("title"); //JS에서 HTML을 읽을 수 있음
 
-//document : HTML 가져옴(object)
-// document.title -> HTML의 title 읽어옴
-// document.title = "hi" 이런식으로 html 변경도 가능
+console.dir(title); //정보 더 자세히 보여줌
+
+
+title.innerText = "Got you!"; //js코드로 html 변경
+
+console.log(title.id);
+console.log(title.className);
