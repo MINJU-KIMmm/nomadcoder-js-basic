@@ -1,11 +1,7 @@
-//3.1 HTML in JS
+//3.2 Searching For Elements
 
-const title = document.getElementById("title"); //JS에서 HTML을 읽을 수 있음
+// const title = document.getElementsByTagName("h1"); //태그 이름으로 가옴
 
-console.dir(title); //정보 더 자세히 보여줌
-
-
-title.innerText = "Got you!"; //js코드로 html 변경
-
-console.log(title.id);
-console.log(title.className);
+// const title = document.querySelector(".hello h1"); //element를 css방식으로 검색. hello 내부의 h1 가져올 수 있음. 첫번째 거만 return
+const title = document.querySelectorAll(".hello h1"); //return array
+console.log(title);
