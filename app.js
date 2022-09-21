@@ -1,7 +1,21 @@
-//3.2 Searching For Elements
+//3.3 Events
 
-// const title = document.getElementsByTagName("h1"); //태그 이름으로 가옴
+const title = document.querySelector(".hello:first-child h1");
 
-// const title = document.querySelector(".hello h1"); //element를 css방식으로 검색. hello 내부의 h1 가져올 수 있음. 첫번째 거만 return
-const title = document.querySelectorAll(".hello h1"); //return array
-console.log(title);
+console.dir(title);
+title.innerText = "Hello";
+
+
+//on~ 는 event
+//element의 style은 js 형식으로 작성되어 있음
+title.style.color = "blue"; //글자 색깔 blue됨
+
+
+//click event
+function handleTitleClick() {
+    title.style.color = "red";
+}
+
+//실행시킬 function명에 괄호 넣으면 안됨
+title.addEventListener("click", handleTitleClick); //js에 어떤 event를 listen할지 알려주고 event 발생시 실행할 function 넘겨줌
+
